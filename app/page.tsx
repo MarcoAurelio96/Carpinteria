@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <section className="relative w-full h-150 flex items-center justify-center">
         <Image
-          src="http://googleusercontent.com/image_collection/image_retrieval/12621170662060542177_0"
+          src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2500&auto=format&fit=crop"
           alt="Taller de Carpintería Los Artesanos"
           fill
           priority
