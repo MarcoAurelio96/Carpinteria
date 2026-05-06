@@ -1,6 +1,34 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getProyectos } from "@/lib/data";
+
+export async function generateStaticParams() {
+  const proyectos = await getProyectos();
+  
+  return proyectos.map((proyecto) => ({
+    slug: proyecto.slug,
+  }));
+}
+
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const proyectos = await getProyectos();
+  const proyecto = proyectos.find((p) => p.slug === slug);
+
+  if (!proyecto) {
+    return { title: "Proyecto no encontrado" };
+  }
+
+  return {
+    title: `${proyecto.titulo} | Los Artesanos`,
+    description: proyecto.descripcion,
+  };
+}
 
 export default async function DetalleProyecto({ 
   params 
