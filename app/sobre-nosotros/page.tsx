@@ -21,12 +21,14 @@ export default function SobreNosotros() {
           </p>
         </div>
         
-        <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+        <div className="relative h-100 rounded-lg overflow-hidden shadow-lg">
           <Image 
             src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2500&auto=format&fit=crop"
             alt="Fundadores trabajando la madera"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
