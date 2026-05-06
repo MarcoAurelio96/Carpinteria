@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProyectos } from "@/lib/data";
 
+export const revalidate = 60;
+
 export default async function ProyectosPage() {
   const proyectos = await getProyectos();
 
@@ -24,6 +26,8 @@ export default async function ProyectosPage() {
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
               />
             </div>
             
