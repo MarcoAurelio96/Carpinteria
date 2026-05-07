@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
         
         <Link href="/" className="text-2xl font-playfair font-bold text-madera-900">
-          Los Artesanos.
+          Los Artesanos
         </Link>
         
         <div className="hidden md:flex gap-8 items-center font-inter">
