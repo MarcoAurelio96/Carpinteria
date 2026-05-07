@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getProyectos } from "@/lib/data";
-
+import { Button } from "@/components/ui/button";
 
 export const revalidate = 60;
 
@@ -18,7 +18,7 @@ export default async function ProyectosPage() {
         
         {proyectos.map((proyecto) => (
  
-          <div key={proyecto.slug} className="border border-industrial/20 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <div key={proyecto.slug} className="border border-industrial/20 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
             
             <div className="relative h-64 w-full">
               <Image
@@ -32,17 +32,22 @@ export default async function ProyectosPage() {
               />
             </div>
             
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-2xl font-playfair font-bold text-madera-900 mb-2">
                 {proyecto.titulo}
               </h2>
-              <p className="text-industrial mb-4 line-clamp-2 font-inter">
+              <p className="text-industrial mb-6 line-clamp-2 font-inter flex-grow">
                 {proyecto.descripcion}
               </p>
               
-              <Link href={`/proyectos/${proyecto.slug}`} className="text-madera-500 font-bold hover:underline">
-                Ver detalles &rarr;
-              </Link>
+              <Button 
+                asChild 
+                className="w-full bg-madera-100 text-madera-900 hover:bg-madera-200 font-bold transition font-inter"
+              >
+                <Link href={`/proyectos/${proyecto.slug}`}>
+                  Ver detalles &rarr;
+                </Link>
+              </Button>
             </div>
 
           </div>

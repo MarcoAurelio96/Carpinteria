@@ -1,3 +1,7 @@
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+
 export default function ContactoPage() {
   
   async function enviarMensaje(formData: FormData) {
@@ -32,46 +36,46 @@ export default function ContactoPage() {
         
         <div>
           <label htmlFor="nombre" className="block text-madera-900 font-bold mb-2 font-inter">Nombre</label>
-          <input 
+          <Input 
             type="text" 
             id="nombre" 
             name="nombre" 
             required
-            className="w-full border border-industrial/20 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-madera-500"
             placeholder="Tu nombre completo"
+            className="border-industrial/30 focus-visible:ring-madera-500 bg-white"
           />
         </div>
 
         <div>
           <label htmlFor="email" className="block text-madera-900 font-bold mb-2 font-inter">Correo Electrónico</label>
-          <input 
+          <Input 
             type="email" 
             id="email" 
             name="email" 
             required
-            className="w-full border border-industrial/20 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-madera-500"
             placeholder="tu@email.com"
+            className="border-industrial/30 focus-visible:ring-madera-500 bg-white"
           />
         </div>
 
         <div>
           <label htmlFor="mensaje" className="block text-madera-900 font-bold mb-2 font-inter">Mensaje</label>
-          <textarea 
+          <Textarea 
             id="mensaje" 
             name="mensaje" 
             rows={5}
             required
-            className="w-full border border-industrial/20 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-madera-500"
             placeholder="Cuéntanos los detalles del mueble que necesitas..."
-          ></textarea>
+            className="border-industrial/30 focus-visible:ring-madera-500 bg-white resize-none"
+          />
         </div>
 
-        <button 
+        <Button 
           type="submit" 
-          className="w-full bg-madera-900 text-white font-bold py-4 rounded-md hover:bg-madera-800 transition font-inter"
+          className="w-full bg-madera-900 text-white font-bold py-6 text-md hover:bg-madera-800 transition font-inter"
         >
           Enviar Mensaje
-        </button>
+        </Button>
 
       </form>
     </main>

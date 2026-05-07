@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-639?style=for-the-badge&logo=css&logoColor=fff)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=FFF)
+![ReactNative](https://img.shields.io/badge/-React_Native-05122A?style=for-the-badge&logo=react)
+![Next](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 
-## Getting Started
+# 📝 Título
+> Logline
 
-First, run the development server:
+Descripción breve
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Despliegue | URL |
+|------------|-----|
+| Frontend | [Vercel](https://www.corner-estudios.com) |
+
+---
+
+## Características
+
+- 1
+- 2
+- 3
+
+---
+
+## Tecnologías
+
+| Frontend | Uso |
+|----------|-----|
+| 1 | 1 |
+| 2 | 2 |
+| 3 | 3 |
+
+| Backend | Uso |
+|---------|-----|
+| 1 | 1 |
+| 2 | 2 |
+| 3 | 3 |
+
+| Auxiliares | Uso |
+|------------|-----|
+| 1 | 1 |
+| 2 | 2 |
+| 3 | 3 |
+
+---
+
+## Estructura del proyecto
+
+```
+project/
+├── index.html              # Estructura HTML semántica
+├── style.css               # Estilos propios y variables CSS
+├── app.js                  # Lógica del frontend
+├── src/
+│   └── api/
+│       └── client.js       # Capa de comunicación con la API
+├── server/                 # Backend
+│   ├── README.md           # Documentación del backend
+│   ├── vercel.json         # Configuración de despliegue en Vercel
+│   ├── package.json
+│   └── src/
+│       ├── index.js        # Punto de entrada del servidor
+│       ├── config/
+│       ├── routes/
+│       ├── controllers/
+│       └── services/
+├── docs/
+│   ├── design/
+│   └── ai/
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Descargar y ejecutar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/user/project.git
+cd project
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Desplegar en Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. A
+2. B
+3. C
 
-## Deploy on Vercel
+### Backend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. A
+2. B
+3. C
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Desarrollado durante las prácticas en [Corner Estudios](https://www.corner-estudios.com) — Marco Aurelio López Cubo — 2026*

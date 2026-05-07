@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function SobreNosotros() {
   return (
@@ -10,7 +12,7 @@ export default function SobreNosotros() {
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
         <div>
-          <h2 className="text-3xl font-playfair text-industrial-dark mb-4">
+          <h2 className="text-3xl font-playfair text-industrial mb-4 font-bold">
             Generaciones de Pasión por la Madera
           </h2>
           <p className="text-industrial text-lg mb-4 leading-relaxed font-inter">
@@ -33,17 +35,32 @@ export default function SobreNosotros() {
         </div>
       </section>
 
-      <section className="bg-madera-100 p-10 rounded-xl">
-        <h2 className="text-3xl font-playfair text-madera-900 mb-6 text-center">
+      <section className="bg-madera-100 p-10 rounded-xl mb-16">
+        <h2 className="text-3xl font-playfair text-madera-900 mb-8 text-center font-bold">
           Nuestro Proceso Artesanal
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
            <div className="text-center">
-             <div className="w-16 h-16 bg-madera-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-             <h3 className="text-xl font-bold mb-2">Selección</h3>
-             <p className="text-industrial">Elegimos las mejores materias primas de bosques sostenibles.</p>
+             <div className="w-16 h-16 bg-madera-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">1</div>
+             <h3 className="text-xl font-bold mb-2 font-playfair text-madera-900">Selección</h3>
+             <p className="text-industrial font-inter">Elegimos las mejores materias primas de bosques sostenibles.</p>
            </div>
+           {/* faltan 2 puntos */}
         </div>
+      </section>
+
+      <section className="text-center bg-white border border-industrial/20 p-12 rounded-xl shadow-sm">
+        <h2 className="text-3xl font-playfair text-madera-900 mb-4 font-bold">
+          ¿Listo para crear algo único?
+        </h2>
+        <p className="text-industrial text-lg mb-8 font-inter max-w-2xl mx-auto">
+          Cuéntanos tu idea y nuestro equipo de artesanos se encargará de hacerla realidad con la máxima dedicación.
+        </p>
+        <Button asChild size="lg" className="bg-madera-900 text-white hover:bg-madera-800 text-lg px-8 py-6">
+          <Link href="/contacto">
+            Habla con nosotros
+          </Link>
+        </Button>
       </section>
 
     </main>

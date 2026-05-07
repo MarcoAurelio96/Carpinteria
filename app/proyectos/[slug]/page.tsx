@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getProyectos } from "@/lib/data";
+import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
   const proyectos = await getProyectos();
@@ -46,9 +47,11 @@ export default async function DetalleProyecto({
     return (
       <main className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-4xl font-playfair mb-4 text-madera-900">Proyecto no encontrado</h1>
-        <Link href="/proyectos" className="text-industrial hover:underline">
-          &larr; Volver a la galería
-        </Link>
+        <Button asChild variant="outline" className="border-industrial/30 text-industrial hover:text-madera-900 hover:bg-madera-100 font-inter">
+          <Link href="/proyectos">
+            &larr; Volver a la galería
+          </Link>
+        </Button>
       </main>
     );
   }
@@ -56,9 +59,11 @@ export default async function DetalleProyecto({
   return (
     <main className="max-w-5xl mx-auto px-8 py-20">
       
-      <Link href="/proyectos" className="text-industrial hover:underline mb-8 inline-block font-inter">
-        &larr; Volver a la galería
-      </Link>
+      <Button asChild variant="ghost" className="mb-8 -ml-4 text-industrial hover:text-madera-900 hover:bg-madera-100 font-inter">
+        <Link href="/proyectos">
+          &larr; Volver a la galería
+        </Link>
+      </Button>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="relative h-125 w-full rounded-xl overflow-hidden shadow-lg">
