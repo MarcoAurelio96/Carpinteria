@@ -10,6 +10,8 @@ export default async function ProyectosPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-8 py-20">
+
+
       <h1 className="text-5xl font-playfair font-bold text-madera-900 mb-12 text-center">
         Nuestros Proyectos
       </h1>
