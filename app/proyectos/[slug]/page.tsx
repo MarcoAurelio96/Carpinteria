@@ -4,13 +4,7 @@ import Link from "next/link";
 import { getProyectos } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 
-export async function generateStaticParams() {
-  const proyectos = await getProyectos();
-  
-  return proyectos.map((proyecto) => ({
-    slug: proyecto.slug,
-  }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ 
   params 
@@ -37,10 +31,10 @@ export default async function DetalleProyecto({
   params: Promise<{ slug: string }> 
 }) {
   
-  const { slug } = await params;
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
+  const { slug } = await params;
   const proyectos = await getProyectos();
-  
   const proyecto = proyectos.find((p) => p.slug === slug);
 
   if (!proyecto) {

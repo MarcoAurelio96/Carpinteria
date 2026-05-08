@@ -3,14 +3,15 @@ import Link from "next/link";
 import { getProyectos } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 export default async function ProyectosPage() {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   const proyectos = await getProyectos();
 
   return (
     <main className="max-w-7xl mx-auto px-8 py-20">
-
 
       <h1 className="text-5xl font-playfair font-bold text-madera-900 mb-12 text-center">
         Nuestros Proyectos
