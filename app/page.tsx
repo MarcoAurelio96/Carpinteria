@@ -7,10 +7,11 @@ export default function Home() {
     <main>
       <section className="relative w-full h-[600px] flex items-center justify-center">
         <Image
-          src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2500&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1520372561567-bac27b0e5fa1?q=80&w=1584&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Taller de Carpintería Los Artesanos"
           fill
           priority
+          quality={100}
           sizes="100vw" 
           className="object-cover z-0"
         />
@@ -22,7 +23,7 @@ export default function Home() {
             Maestros Artesanales
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-inter max-w-2xl mx-auto">
-            Especialistas en muebles a medida y restauración artesanal desde 1996.
+            Especialistas en muebles a medida y restauración artesanal desde 1896.
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild size="lg" className="bg-madera-500 hover:bg-madera-600 text-white font-inter">
