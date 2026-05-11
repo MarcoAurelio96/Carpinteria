@@ -3,11 +3,9 @@ import Link from "next/link";
 import { getProyectos } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default async function ProyectosPage() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-
   const proyectos = await getProyectos();
 
   return (
