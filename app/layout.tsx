@@ -8,16 +8,19 @@ import Footer from "@/components/Footer";
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
+  display: "swap", 
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Los Artesanos | Carpintería a Medida",
-  description: "Muebles a medida y restauración artesanal desde 1996.",
+  title: "Taller Los Artesanos | Ebanistería y Restauración",
+  description: "Maestros carpinteros desde 1896. Especialistas en muebles a medida, restauración artesanal y diseño de espacios únicos.",
+  keywords: ["carpintería", "ebanistería", "muebles a medida", "restauración", "madera"],
 };
 
 export default function RootLayout({
@@ -28,9 +31,9 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable}`}
     >
-      <body className="min-h-full flex flex-col bg-white">
+      <body className="min-h-screen flex flex-col bg-white antialiased">
         
         <Navbar />
         
